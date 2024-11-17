@@ -1,17 +1,21 @@
 {
-    "manifest_version": 3,
-    "name": "Link Extractor",
-    "version": "1.0",
-    "description": "Extracts all links from the current page",
-    "permissions": ["scripting", "activeTab"],
-    "action": {
-      "default_popup": "popup.html"
-    },
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
-      }
-    ]
-  }
+  "manifest_version": 3,
+  "name": "Link Extractor",
+  "version": "1.0",
+  "description": "Extracts all links from the current page",
+  "permissions": ["scripting", "activeTab","tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+},
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
   
