@@ -3,6 +3,7 @@
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === "getLinks") {
       console.log("Received message to get links.");
+
       const links = Array.from(document.querySelectorAll('a'))
           .map(link => link.href)
           .filter(href => href.startsWith('http'));

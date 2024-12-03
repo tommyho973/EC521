@@ -16,7 +16,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
                         clientVersion: "1.0"
                     },
                     threatInfo: {
-                        threatTypes: ["MALWARE", "SOCIAL_ENGINEERING", "UNWANTED_SOFTWARE"],
+                        threatTypes: ["MALWARE", "SOCIAL_ENGINEERING", "UNWANTED_SOFTWARE", "POTENTIALLY_HARMFUL_APPLICATION", "UNWANTED_SOFTWARE"],
                         platformTypes: ["ANY_PLATFORM"],
                         threatEntryTypes: ["URL"],
                         threatEntries: [{ url }]

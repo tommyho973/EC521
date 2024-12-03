@@ -3,7 +3,7 @@
   "name": "Link Extractor",
   "version": "1.0",
   "description": "Extracts all links from the current page",
-  "permissions": ["scripting", "activeTab","tabs"],
+  "permissions": ["scripting", "activeTab", "tabs"],
   "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"
